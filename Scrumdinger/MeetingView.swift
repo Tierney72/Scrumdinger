@@ -1,9 +1,6 @@
-//
-//  ContentView.swift
-//  Scrumdinger
-//
-//  Created by Lee Tierney on 19/06/2022.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+*/
 
 import SwiftUI
 
@@ -21,22 +18,22 @@ struct MeetingView: View {
                 VStack(alignment: .trailing) {
                     Text("Seconds Remaining")
                         .font(.caption)
-                    Label("600", systemImage:  "hourglass.tophalf.fill")
+                    Label("600", systemImage: "hourglass.tophalf.fill")
                 }
             }
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Time Remaining")
-            .accessibilityValue("10 Minutes")
+            .accessibilityLabel("Time remaining")
+            .accessibilityValue("10 minutes")
             Circle()
                 .strokeBorder(lineWidth: 24)
             HStack {
                 Text("Speaker 1 of 3")
                 Spacer()
-                Button(action:{}){
+                Button(action: {}) {
                     Image(systemName: "forward.fill")
                 }
+                .accessibilityLabel("Next speaker")
             }
-            .accessibilityLabel("Next Speaker")
         }
         .padding()
     }
